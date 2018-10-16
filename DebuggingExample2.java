@@ -30,13 +30,15 @@ public class DebuggingExample2 {
 
     private String vowelsIn(String word) {
         int length = word.length();
+        int i = 0;
         String vowelsFound = "";
-
-        for (int i = 0; i < length; i++) {
+        
+        while (i < length) {
             String c = word.substring(i, i + 1);
             if (isVowel(c) && !vowelsFound.contains(c)) {
                 vowelsFound += c;
             }
+             i++;
         }
         return vowelsFound;
     }
